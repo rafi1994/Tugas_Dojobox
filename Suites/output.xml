@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220811 21:28:03.896" rpa="false" schemaversion="3">
+<suite id="s1" name="Search" source="D:\tugas dojobox\suites\Search.robot">
+<test id="s1-t1" name="User able to youtube Homepage_url" line="9">
+<kw name="Open Browser Chrome" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<arg>url=${Youtubepage_url}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220811 21:28:04.353" level="INFO">Opening browser 'gc' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20220811 21:28:04.352" endtime="20220811 21:28:57.301"/>
+</kw>
+<status status="PASS" starttime="20220811 21:28:04.351" endtime="20220811 21:28:57.302"/>
+</kw>
+<kw name="Navigation Youtube Page" library="youTubeKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Youtubepage_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220811 21:28:57.306" level="INFO">Opening url 'https://www.youtube.com/'</msg>
+<status status="PASS" starttime="20220811 21:28:57.305" endtime="20220811 21:29:00.578"/>
+</kw>
+<status status="PASS" starttime="20220811 21:28:57.303" endtime="20220811 21:29:00.579"/>
+</kw>
+<kw name="Verify Current Url is Youtube Url" library="youTubeKeyword">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${Youtubepage_url}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220811 21:29:00.594" level="INFO">Current location is 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20220811 21:29:00.580" endtime="20220811 21:29:00.594"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:00.579" endtime="20220811 21:29:00.594"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220811 21:29:00.595" endtime="20220811 21:29:03.364"/>
+</kw>
+<status status="PASS" starttime="20220811 21:28:04.350" endtime="20220811 21:29:03.365"/>
+</test>
+<test id="s1-t2" name="User Search dojobox channel" line="12">
+<kw name="Open Browser Chrome" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<arg>url=${Youtubepage_url}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220811 21:29:03.371" level="INFO">Opening browser 'gc' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20220811 21:29:03.370" endtime="20220811 21:29:53.969"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:03.369" endtime="20220811 21:29:53.970"/>
+</kw>
+<kw name="Input channel name dojobox" library="youTubeKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Search}</arg>
+<arg>${dojobox}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220811 21:29:53.972" level="INFO">Typing text 'Dojobox' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20220811 21:29:53.971" endtime="20220811 21:29:54.261"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:53.970" endtime="20220811 21:29:54.261"/>
+</kw>
+<kw name="User Click Button seacrh" library="youTubeKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220811 21:29:54.263" level="INFO">Clicking element '//*[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20220811 21:29:54.262" endtime="20220811 21:29:54.427"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:54.262" endtime="20220811 21:29:54.428"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220811 21:29:54.428" endtime="20220811 21:29:56.921"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:03.368" endtime="20220811 21:29:56.922"/>
+</test>
+<test id="s1-t3" name="User Must Be On The Dojobox Channel" line="15">
+<kw name="Open Browser Chrome" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<arg>url=${Youtubepage_url}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220811 21:29:56.929" level="INFO">Opening browser 'gc' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20220811 21:29:56.928" endtime="20220811 21:30:39.560"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:56.927" endtime="20220811 21:30:39.561"/>
+</kw>
+<kw name="Navigation dojobox Channel Page" library="youTubeKeyword">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Dojobox_Channel}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220811 21:30:39.562" level="INFO">Opening url 'https://www.youtube.com/channel/UCg-GF1tOefIL_dPZdwTBv0g'</msg>
+<status status="PASS" starttime="20220811 21:30:39.562" endtime="20220811 21:30:42.016"/>
+</kw>
+<status status="PASS" starttime="20220811 21:30:39.561" endtime="20220811 21:30:42.016"/>
+</kw>
+<kw name="Verify Dojobox Channel Page" library="youTubeKeyword">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${Dojobox_Channel}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220811 21:30:42.304" level="INFO">Current location is 'https://www.youtube.com/channel/UCg-GF1tOefIL_dPZdwTBv0g'.</msg>
+<status status="PASS" starttime="20220811 21:30:42.020" endtime="20220811 21:30:42.304"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220811 21:30:47.310" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220811 21:30:42.305" endtime="20220811 21:30:47.310"/>
+</kw>
+<status status="PASS" starttime="20220811 21:30:42.018" endtime="20220811 21:30:47.310"/>
+</kw>
+<kw name="Verify dojobox section Appears" library="youTubeKeyword">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Dojobox_Header}</arg>
+<arg>Dojobox Indonesia</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220811 21:30:47.362" level="INFO">Element '//div[@id="channel-header"]' contains text 'Dojobox Indonesia'.</msg>
+<status status="PASS" starttime="20220811 21:30:47.312" endtime="20220811 21:30:47.363"/>
+</kw>
+<status status="PASS" starttime="20220811 21:30:47.311" endtime="20220811 21:30:47.363"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220811 21:30:47.364" endtime="20220811 21:30:49.939"/>
+</kw>
+<status status="PASS" starttime="20220811 21:29:56.925" endtime="20220811 21:30:49.940"/>
+</test>
+<doc>Testcase seacrh</doc>
+<status status="PASS" starttime="20220811 21:28:03.905" endtime="20220811 21:30:49.942"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Search">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
